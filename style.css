@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'MedievalSharp', cursive;
+  background: linear-gradient(to bottom, #0a0a0f, #1a0f2e);
+  color: #eee;
+}
+
+header {
+  background: rgba(20, 10, 40, 0.9);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #5a2ea6;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #d6baff;
+  text-shadow: 0 0 10px #8b5cf6;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #b3e5fc;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00e5ff;
+  text-shadow: 0 0 8px #00e5ff;
+}
+
+main {
+  padding: 20px;
+}
+
+.caixa {
+  background: rgba(40, 20, 60, 0.7);
+  border: 2px solid #5a2ea6;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+}
+
+h2 {
+  color: #d6baff;
+  text-shadow: 0 0 5px #8b5cf6;
+}
+
+ul li::before {
+  content: "⚔️ ";
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(20, 10, 40, 0.9);
+  border-top: 2px solid #5a2ea6;
+}

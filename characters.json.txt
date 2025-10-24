@@ -1,0 +1,65 @@
+[
+  {
+    "id": "arian",
+    "name": "Arian, o Guardião das Águas",
+    "img": "imagens/arian.jpg",
+    "summary": "Protetor dos lagos antigos e mestre das correntes.",
+    "bio": "Arian nasceu nas margens do Lago Eld, treinado para proteger artefatos aquáticos ancestrais. Seu passado guarda uma aliança quebrada com uma ordem esquecida.",
+    "skills": ["Ondas Protetoras", "Cura com Névoa", "Chamado das Correntes"],
+    "notes": "Tem cicatriz no ombro direito e um amuleto que brilha à noite."
+  },
+  {
+    "id": "dorin",
+    "name": "Dorin, o Ferreiro Errante",
+    "img": "imagens/dorin.jpg",
+    "summary": "Forjador de lâminas rúnicas e viajante incansável.",
+    "bio": "Dorin viaja entre vilarejos vendendo armas encantadas. Foi o responsável por forjar a espada cerimonial usada na coroação do último rei.",
+    "skills": ["Forja Rúnica", "Golpe Sísmico", "Sentido do Metal"],
+    "notes": "Gosta de chá de raiz e coleciona fragmentos de meteorito."
+  },
+  {
+    "id": "lyra",
+    "name": "Lyra, a Sussurrante das Estrelas",
+    "img": "imagens/lyra.jpg",
+    "summary": "Oráculo jovem que lê o céu e decifra destinos.",
+    "bio": "Lyra foi criada no Observatório de Telmar. Seu dom a conecta com constelações que sussurram segredos. É ambivalente sobre o próprio destino.",
+    "skills": ["Visões Celestes", "Encanto Silente", "Mapa Astral"],
+    "notes": "Medalhão com uma pequena lente que foca as estrelas."
+  },
+  {
+    "id": "kael",
+    "name": "Kael, o Lobo de Bronze",
+    "img": "imagens/kael.jpg",
+    "summary": "Guerreiro solitário com armadura improvisada de bronze.",
+    "bio": "Ex-oficial da guarda, Kael tornou-se errante após uma batalha que destruiu sua vila. Busca redenção e respostas sobre sua linhagem.",
+    "skills": ["Investida de Bronze", "Resistência Sobrenatural", "Estratégia de Batalha"],
+    "notes": "Tem uma tatuagem que indica ligação com uma casa nobre."
+  },
+  {
+    "id": "seraphine",
+    "name": "Seraphine, Tecelã de Veias",
+    "img": "imagens/seraphine.jpg",
+    "summary": "Feiticeira que manipula os fios entre vida e morte.",
+    "bio": "Seraphine estudou nas catacumbas antigas e aprendeu a tecer encantos que mantêm vivos tanto aliados quanto maldições.",
+    "skills": ["Teia Vital", "Selo de Almas", "Ressurreição Parcial"],
+    "notes": "Sussurra letras de uma canção perdida quando conjura."
+  },
+  {
+    "id": "morgun",
+    "name": "Morgun, o Caçador de Sombras",
+    "img": "imagens/morgun.jpg",
+    "summary": "Assassino que persegue seres do limiar da noite.",
+    "bio": "Morgun faz juramentos silenciosos para proteger fronteiras, usando artifícios que o permitem caminhar entre sombras e memórias.",
+    "skills": ["Passo das Sombras", "Arpão Fantasma", "Rastreio Nocturno"],
+    "notes": "Fala pouco; tem um corvo que o acompanha."
+  },
+  {
+    "id": "tarrak",
+    "name": "Tarrak, o Arquiteto de Ruínas",
+    "img": "imagens/tarrak.jpg",
+    "summary": "Arqueólogo e construtor de artefatos colossais.",
+    "bio": "Tarrak decifra mecanismos antiguos e reconstrói máquinas esquecidas. Sua curiosidade muitas vezes o coloca em perigo.",
+    "skills": ["Decifrar Runas", "Arquitetura Pós-humana", "Engrenagem Experimental"],
+    "notes": "Carrega sempre um caderninho de esboços."
+  }
+]

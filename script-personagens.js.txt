@@ -1,0 +1,83 @@
+// script-personagens.js
+// Carrega characters.json e implementa hash routing: personagens.html#arian
+
+let characters = [];
+
+async function loadCharacters() {
+  try {
+    const res = await fetch('characters.json');
+    if (!res.ok) throw new Error('Erro carregando characters.json');
+    characters = await res.json();
+    renderList();
+    handleHash(); // mostra detalhe se hash presente
+    window.addEventListener('hashchange', handleHash);
+  } catch (err) {
+    document.getElementById('lista').innerHTML = '<li>Erro ao carregar personagens.</li>';
+    console.error(err);
+  }
+}
+
+function renderList() {
+  const ul = document.getElementById('lista');
+  ul.innerHTML = '';
+  characters.forEach(c => {
+    const li = document.createElement('li');
+    li.className = 'card';
+    li.innerHTML = `
+      <img src="${c.img}" alt="${c.name}">
+      <h3>${c.name}</h3>
+      <p style="color:#dcdcdc; font-size:0.95rem">${c.summary}</p>
+      <p style="margin-top:8px"><a href="#${c.id}">Ler mais →</a></p>
+    `;
+    ul.appendChild(li);
+  });
+}
+
+function renderDetail(id) {
+  const c = characters.find(x => x.id === id);
+  const detalhe = document.getElementById('detalhe');
+  if (!c) {
+    detalhe.innerHTML = '<p>Personagem não encontrado.</p>';
+    return;
+  }
+
+  detalhe.innerHTML = `
+    <h2>${c.name}</h2>
+    <img src="${c.img}" alt="${c.name}" style="max-width:380px; width:100%; border-radius:8px; display:block; margin:8px 0;">
+    <p><strong>${c.summary}</strong></p>
+    <h3>Biografia</h3>
+    <p>${c.bio}</p>
+    <h3>Habilidades</h3>
+    <ul>${c.skills.map(s => `<li>${s}</li>`).join('')}</ul>
+    ${c.notes ? `<h4>Notas</h4><p>${c.notes}</p>` : ''}
+  `;
+}
+
+function showList() {
+  document.getElementById('lista-section').classList.remove('hidden');
+  document.getElementById('detalhe-section').classList.add('hidden');
+}
+
+function showDetail() {
+  document.getElementById('lista-section').classList.add('hidden');
+  document.getElementById('detalhe-section').classList.remove('hidden');
+  // rolar pro topo do detalhe para melhor UX
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function handleHash() {
+  const id = location.hash.replace('#','');
+  if (!id) {
+    showList();
+    return;
+  }
+  renderDetail(id);
+  showDetail();
+}
+
+document.getElementById('voltar-lista').addEventListener('click', () => {
+  location.hash = '';
+});
+
+// inicialização
+loadCharacters();
