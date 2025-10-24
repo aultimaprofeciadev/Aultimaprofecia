@@ -1,68 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
+
+/* === Estilo geral === */
 body {
+  font-family: 'Cinzel', 'Georgia', serif;
+  background: radial-gradient(circle at center, #2b1d0e 0%, #1a1208 100%);
+  color: #f0e6d2;
   margin: 0;
-  font-family: 'MedievalSharp', cursive;
-  background: linear-gradient(to bottom, #0a0a0f, #1a0f2e);
-  color: #eee;
+  padding: 0;
+  line-height: 1.8;
+  background-attachment: fixed;
 }
 
+/* === Cabeçalho === */
 header {
-  background: rgba(20, 10, 40, 0.9);
-  padding: 20px;
+  background: linear-gradient(180deg, #3e2a12 0%, #2b1d0e 100%);
+  color: #f3d9a4;
+  padding: 1.5rem 1rem;
   text-align: center;
-  border-bottom: 2px solid #5a2ea6;
+  border-bottom: 3px solid #a67c37;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px #000;
   margin: 0;
-  font-size: 2.5em;
-  color: #d6baff;
-  text-shadow: 0 0 10px #8b5cf6;
 }
 
+/* === Navegação === */
 nav {
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
-nav a {
-  color: #b3e5fc;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+nav button {
+  background: #5a3b1a;
+  border: 2px solid #a67c37;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.3rem;
+  color: #f0e6d2;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  text-shadow: 1px 1px 3px #000;
+  transition: all 0.3s ease;
 }
 
-nav a:hover {
-  color: #00e5ff;
-  text-shadow: 0 0 8px #00e5ff;
+nav button:hover {
+  background: #7c5220;
+  transform: translateY(-2px);
 }
 
+nav button[aria-selected="true"] {
+  background: #a67c37;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 215, 128, 0.4);
+}
+
+/* === Conteúdo principal === */
 main {
-  padding: 20px;
-}
-
-.caixa {
-  background: rgba(40, 20, 60, 0.7);
-  border: 2px solid #5a2ea6;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  background: rgba(30, 20, 10, 0.85);
+  border: 2px solid #a67c37;
   border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 
+/* === Seções === */
+section {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: none;
+}
+
+section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Títulos === */
 h2 {
-  color: #d6baff;
-  text-shadow: 0 0 5px #8b5cf6;
+  border-bottom: 2px solid #a67c37;
+  padding-bottom: 0.5rem;
+  color: #f5d67b;
+  text-shadow: 1px 1px 3px #000;
 }
 
-ul li::before {
-  content: "⚔️ ";
+/* === Links e detalhes === */
+a {
+  color: #f5d67b;
+  text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid #a67c37;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin-top: 1rem;
+}
+
+/* === Rodapé opcional === */
 footer {
   text-align: center;
-  padding: 15px;
-  background: rgba(20, 10, 40, 0.9);
-  border-top: 2px solid #5a2ea6;
+  padding: 1rem;
+  color: #cbb57a;
+  font-size: 0.9rem;
 }
